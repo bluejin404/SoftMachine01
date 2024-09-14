@@ -1,0 +1,57 @@
+<mujoco model="bipedal_robot">
+    <option gravity="0 0 -9.81" integrator="RK4" timestep="0.01" />
+
+    <default>
+        <joint damping="0.1" />
+        <motor ctrlrange="-1 1" ctrllimited="true" />
+    </default>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1" />
+        <geom type="plane" size="10 10 0.1" rgba=".9 .9 .9 1" />
+
+        <body name="torso" pos="0 0 0.75">
+            <joint name="root" type="free" />
+            <geom type="box" size="0.1 0.2 0.1" rgba="0.8 0.6 0.4 1" mass = "0.5"/>
+
+            <body name="right_thigh" pos="0 -0.1 -0.1">
+                <joint name="right_hip_flex" type="hinge" axis="0 1 0" range="-45 45" />
+                <joint name="right_hip_roll" type="hinge" axis="1 0 0" range="-15 15" />
+                <geom type="capsule" size="0.05" fromto="0 0 0 0 0 -0.3" rgba="0.8 0.5 0.3 1" mass = "1"/>
+                <body name="right_shin" pos="0 0 -0.3">
+                    <joint name="right_knee" type="hinge" axis="0 1 0" range="0 90" />
+                    <geom type="capsule" size="0.04" fromto="0 0 0 0 0 -0.3" rgba="0.8 0.5 0.3 1" mass = "1"/>
+                    <body name="right_foot" pos="0 0 -0.3">
+                        <joint name="right_ankle" type="hinge" axis="0 1 0" range="-45 45" />
+                        <geom type="box" size="0.1 0.05 0.02" pos="0.05 0 0" rgba="0.8 0.5 0.3 1" mass = "0.5"/>
+                    </body>
+                </body>
+            </body>
+
+            <body name="left_thigh" pos="0 0.1 -0.1">
+                <joint name="left_hip_flex" type="hinge" axis="0 1 0" range="-45 45" />
+                <joint name="left_hip_roll" type="hinge" axis="1 0 0" range="-15 15" />
+                <geom type="capsule" size="0.05" fromto="0 0 0 0 0 -0.3" rgba="0.8 0.5 0.3 1" mass = "1"/>
+                <body name="left_shin" pos="0 0 -0.3">
+                    <joint name="left_knee" type="hinge" axis="0 1 0" range="0 90" />
+                    <geom type="capsule" size="0.04" fromto="0 0 0 0 0 -0.3" rgba="0.8 0.5 0.3 1" mass = "1"/>
+                    <body name="left_foot" pos="0 0 -0.3">
+                        <joint name="left_ankle" type="hinge" axis="0 1 0" range="-45 45" />
+                        <geom type="box" size="0.1 0.05 0.02" pos="0.05 0 0" rgba="0.8 0.5 0.3 1" mass = "0.5"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>1
+        <motor joint="right_hip_flex" name="right_hip_flex_motor" gear="9" />
+        <motor joint="right_hip_roll" name="right_hip_roll_motor" gear="3" />
+        <motor joint="right_knee" name="right_knee_motor" gear="9" />
+        <motor joint="right_ankle" name="right_ankle_motor" gear="3" />
+        <motor joint="left_hip_flex" name="left_hip_flex_motor" gear="9" />
+        <motor joint="left_hip_roll" name="left_hip_roll_motor" gear="3" />
+        <motor joint="left_knee" name="left_knee_motor" gear="9" />
+        <motor joint="left_ankle" name="left_ankle_motor" gear="3" />
+    </actuator>
+</mujoco>

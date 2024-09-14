@@ -1,0 +1,85 @@
+<mujoco model="softmachine01">
+
+    <default>
+        <joint damping="0.1" />
+    </default>
+
+    <asset>
+        <mesh name="l_hip_pitch" file="l_hip_pitch.obj" />
+        <mesh name="l_femur" file="l_femur.obj" />
+        <mesh name="l_tibia" file="l_tibia.obj" />
+        <mesh name="l_ankle" file="l_ankle.obj" />
+        <mesh name="r_hip_pitch" file="r_hip_pitch.obj" />
+        <mesh name="r_femur" file="r_femur.obj" />
+        <mesh name="r_tibia" file="r_tibia.obj" />
+        <mesh name="r_ankle" file="r_ankle.obj" />
+    </asset>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1" />
+        <geom type="plane" size="10 10 0.1" rgba="1 1 1 1" />
+
+        <body name="pelvis" pos="0.1 0 0.257">
+            <joint type="free" />
+            <body name="l_hip_pitch" pos="0 0 0">
+                <geom type="mesh" mesh="l_hip_pitch" mass="0.368" rgba="1 1 1 1" />
+                <body name="l_femur" pos="0 0 0">
+                    <joint name="l_hip_pitch" type="hinge" axis="1 0 0" range="-45 45" />
+                    <geom type="mesh" mesh="l_femur" mass="0.670" rgba="1 1 1 1" />
+
+                    <body name="l_tibia" pos="0 0.015529 -0.117956">
+                        <joint name="l_knee_pitch" type="hinge" pos="0 0 0" axis="1 0 0"
+                            range="-45 45" />
+                        <geom type="mesh" pos="-0.022 -0.015529 0.217956" mesh="l_tibia"
+                            mass="0.670" rgba="1 1 1 1" />
+
+                        <body name="l_ankle" pos="0 -0.015529 -0.117956">
+                            <joint name="l_ankle_pitch" type="hinge" pos="0 0 0" axis="1 0 0"
+                                range="-45 45" />
+                            <geom type="mesh" pos="0.0036 0 0.385911" mesh="l_ankle" mass="0.122"
+                                rgba="1 1 1 1" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+            <body name="r_hip_pitch" pos="-0.1 0 0">
+                <geom type="mesh" mesh="r_hip_pitch" mass="0.368" rgba="1 1 1 1" />
+                <body name="r_femur" pos="0 0 0">
+                    <joint name="r_hip_pitch" type="hinge" axis="1 0 0" range="-45 45" />
+                    <geom type="mesh" mesh="r_femur" mass="0.670" rgba="1 1 1 1" />
+
+                    <body name="r_tibia" pos="0.003 0.015529 -0.117956">
+                        <joint name="r_knee_pitch" type="hinge" pos="0 0 0" axis="1 0 0"
+                            range="-45 45" />
+                        <geom type="mesh" pos="0.022 -0.015529 0.217956" mesh="r_tibia"
+                            mass="0.670" rgba="1 1 1 1" />
+
+                        <body name="r_ankle" pos="0 -0.015529 -0.117956">
+                            <joint name="r_ankle_pitch" type="hinge" pos="0 0 0" axis="1 0 0"
+                                range="-45 45" />
+                            <geom type="mesh" pos="0.0436 0 0.385911" mesh="r_ankle" mass="0.122"
+                                rgba="1 1 1 1" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+
+    </worldbody>
+
+    <actuator>
+        <motor name="l_hip_pitch_motor" joint="l_hip_pitch" ctrllimited="true" ctrlrange="-4.5 4.5" />
+        <motor name="l_knee_pitch_motor" joint="l_knee_pitch" ctrllimited="true"
+            ctrlrange="-4.5 4.5" />
+        <motor name="l_ankle_pitch_motor" joint="l_ankle_pitch" ctrllimited="true"
+            ctrlrange="-1.5 1.5" />
+        <motor name="r_hip_pitch_motor" joint="r_hip_pitch" ctrllimited="true" ctrlrange="-4.5 4.5" />
+        <motor name="r_knee_pitch_motor" joint="r_knee_pitch" ctrllimited="true"
+            ctrlrange="-4.5 4.5" />
+        <motor name="r_ankle_pitch_motor" joint="r_ankle_pitch" ctrllimited="true"
+            ctrlrange="-1.5 1.5" />
+    </actuator>
+
+</mujoco>
+
