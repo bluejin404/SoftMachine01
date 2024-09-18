@@ -27,6 +27,6 @@ MIT Cheetah로부터 영감을 받아 2024년부터 개인 연구로 진행되�
 **에너지 회수 기작**: 인간의 경우 발을 땅에 딛는 순간 아킬레스건이 신장되며 버려지는 운동 에너지가 용수철 퍼텐셜 에너지로 저장됩니다. 이 에너지는 적절한 시점에 다시 운동에너지로 방출되어 전진을 위한 추진력으로 사용되며 이를 통해 약 60%의 에너지를 절약할 수 있습니다.
 소프트 머신 또한 현재 개발 단계에 있는 '머슬 엔진' 하드웨어를 장착하면, 보행 과정에서 버려지는 운동 에너지를 슈퍼 커패시터 충전을 위해 사용합니다. 이 에너지는 적절한 시점에 다시 운동에너지로 방출됩니다.
 
-**오픈소스**: 가능한 모든 부품을 가정용 FDM 3D프린터를 사용하여 제작할 수 있도록 최적화하였으며 모든 하드웨어 설계도와 소프트웨어는 로봇공학 교육을 목적으로 무상으로 사용하실 수 있습니다.
+**오픈소스**: 가능한 모든 부품을 가정용 FDM 3D프린터를 사용하여 제작할 수 있도록 최적화하였으며 모든 하드웨어 설계도와 소프트웨어는 비상업적 사용범위 내에서 무상으로 이용 가능합니다.
 
 This project is an open-source, kid-sized humanoid robot that minimizes transportation costs (COT) through bio-inspired designs and inertia moment optimization. Dive into the world of robotic innovation, where biomechanics meets advanced robotics engineering.
