@@ -1,10 +1,12 @@
 # Soft Machine 01
 
-![soft machine zero v41 dis2](https://github.com/user-attachments/assets/67810a04-e44f-4b01-a092-a57b7b74d16b)| ![soft machine zero v41 dis](https://github.com/user-attachments/assets/892d8998-96c8-4a2e-89a4-0fab040ae9f5)
+
+![soft machine zero v42 fll](https://github.com/user-attachments/assets/a66a63b1-a3b4-4041-85fa-c523e927985c)| ![image](https://github.com/user-attachments/assets/018fb950-79fd-474e-acaf-8e5481559526)
 --|--|
 
+
 ## Introduction
-**S**cientificly **O**ptimized hardware **F**or reducing **T**ransportation cost / **Machine** no.**01**
+**S**cientificly **O**ptimized hardware **F**or reducing cost of **T**ransport / **Machine** no.**01**
 
 소프트 머신은 수송비용(COT)을 최소화하기 위해 과학적 사고를 통해 최적화된 오픈소스 키드사이즈 휴머노이드 로봇 플랫폼입니다.
 
@@ -28,5 +30,15 @@ MIT Cheetah로부터 영감을 받아 2024년부터 개인 연구로 진행되�
 소프트 머신 또한 현재 개발 단계에 있는 '머슬 엔진' 하드웨어를 장착하면, 보행 과정에서 버려지는 운동 에너지를 슈퍼 커패시터 충전을 위해 사용합니다. 이 에너지는 적절한 시점에 다시 운동에너지로 방출됩니다.
 
 **오픈소스**: 가능한 모든 부품을 가정용 FDM 3D프린터를 사용하여 제작할 수 있도록 최적화하였으며 모든 하드웨어 설계도와 소프트웨어는 비상업적 사용범위 내에서 무상으로 이용 가능합니다.
+
+
+## Structure
+![soft machine zero v41 dis2](https://github.com/user-attachments/assets/67810a04-e44f-4b01-a092-a57b7b74d16b)| ![soft machine zero v41 dis](https://github.com/user-attachments/assets/892d8998-96c8-4a2e-89a4-0fab040ae9f5)
+--|--|
+
+
+소프트 머신은 다음 계층 구조로 제작되었습니다.
+Upper Pelvis(보라색) -> Lower Pelvis(파란색) -> Inner Femur(청록색) -> Outer Femur(분홍색) -> Inner Tibia(보라색) -> Outer Tibia(분홍색) -> Achilles(연두색) --> Ankle(노란색)
+자세한 도면은 첨부된 SoftMachine01.F3D을 참고하세요.
 
 This project is an open-source, kid-sized humanoid robot that minimizes transportation costs (COT) through bio-inspired designs and inertia moment optimization. Dive into the world of robotic innovation, where biomechanics meets advanced robotics engineering.
