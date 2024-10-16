@@ -37,6 +37,7 @@ MIT Cheetah로부터 영감을 받아 2024년부터 개인 연구로 진행되�
 ![soft machine zero v41 dis2](https://github.com/user-attachments/assets/67810a04-e44f-4b01-a092-a57b7b74d16b)| ![soft machine zero v41 dis](https://github.com/user-attachments/assets/892d8998-96c8-4a2e-89a4-0fab040ae9f5)
 --|--|
 
+https://a360.co/3A26VUs
 
 소프트 머신은 다음 계층 구조로 제작되었습니다.
 Upper Pelvis(보라색) -> Lower Pelvis(파란색) --> Inner Femur(청록색) -> Outer Femur(분홍색) --> Inner Tibia(보라색) -> Outer Tibia(분홍색) --> Achilles(연두색) --> Ankle(노란색)
