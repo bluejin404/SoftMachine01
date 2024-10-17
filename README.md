@@ -12,6 +12,8 @@
 
 MIT Cheetah로부터 영감을 받아 2024년부터 개인 연구로 진행되고 있으며, 생체역학적 사고와 물리학에 기반하여 최적화된 고성능 하드웨어 기술을 교육용 키드사이즈 로봇에서도 접할 수 있도록 앞당기는 것을 목표로 합니다.
 
+This project is an open-source, kid-sized humanoid robot that minimizes transportation costs (COT) through bio-inspired designs and inertia moment optimization. Dive into the world of robotic innovation, where biomechanics meets advanced robotics engineering.
+
 ## Behind Story
 소프트 머신의 이름은 1961년 출판된 윌리엄 버로스의 소설, '소프트 머신'으로부터 영감을 받았습니다.
 
@@ -30,7 +32,7 @@ MIT Cheetah로부터 영감을 받아 2024년부터 개인 연구로 진행되�
 소프트 머신 또한 현재 개발 단계에 있는 '머슬 엔진' 하드웨어를 장착하면, 보행 과정에서 버려지는 운동 에너지를 슈퍼 커패시터 충전을 위해 사용합니다. 이 에너지는 적절한 시점에 다시 운동에너지로 방출됩니다.
 
 **오픈소스**: 가능한 모든 부품을 가정용 FDM 3D프린터를 사용하여 제작할 수 있도록 최적화하였으며 모든 하드웨어 설계도와 소프트웨어는 비상업적 사용범위 내에서 무상으로 이용 가능합니다.
-기계부를 구성하는 모든 부품에 대한 설계도는 SoftMachine01.F3Z에서 다운로드 받을 수 있으며 전자부의 경우 제 MuscleEngine01 레포지토리에서 다운로드 받을 수 있습니다.
+기계부를 구성하는 모든 부품에 대한 설계도는 SoftMachine01.F3Z에서 다운로드 받을 수 있으며 전자부의 경우 제 MuscleEngine01 레포지토리에서 작업 진행 현황과 스키메틱 다이어그램을 확인하실 수 있습니다.
 
 
 ## Structure
@@ -44,4 +46,16 @@ Upper Pelvis(보라색) -> Lower Pelvis(파란색) --> Inner Femur(청록색) ->
 SoftMachine01.F3Z 파일을 참고하세요.
 
 
-This project is an open-source, kid-sized humanoid robot that minimizes transportation costs (COT) through bio-inspired designs and inertia moment optimization. Dive into the world of robotic innovation, where biomechanics meets advanced robotics engineering.
+## Works in Progress
+현재 대부분의 기구부 설계가 완료되었지만, 현재 업데이트가 진행 중인 부분들이 있습니다.
+
+### 1. Achilles의 굽힘 문제 해결
+주어진 디자인스페이스 내에 Achilles Driver, Achilles, Ankle을 같은 축 상에 배열하는 문제가 해결되지 않았습니다. 현재 이 세 부품이 동일한 선상에 배열되어있지 않아 Achilles가 파괴역학적 관점에서 보(beam)로 작용하고, 이로 인해 불필요한 굽힘력을 받습니다. 이상적인 Achilles는 압축력만을 받는 이상적인 기둥(column)으로 작용해야합니다.
+
+### 2. 회생제동장치 설계
+시스템에서 각 관절이 감속할 때, 일반적으로는 버려지는 운동에너지를 전기에너지로 변환하고 슈퍼커패시터에 저장하였다가 시스템이 급가속할 때 이를 꺼내 사용하는 아이디어를 통해 수송비용(COT)을 극단적으로 낮추고자 합니다. 작업 상황은 제 MuscleEngine01 레포지토리에 업데이트되고 있습니다.
+
+### 3. 회생제동 장치와 기구부 디자인의 융합
+앞서 언급한 회생제동 시스템을 사용하면 회수된 에너지를 저장하기 위해 큰 용량의 커패시터가 요구됩니다. 키드사이즈 휴머노이드에서 이를 위한 공간을 할당하는 것에는 어려움이 있습니다.
+
+현재 정적응력해석을 통해 응력해소구간을 탐색하고, 이 응력해소구간을 원형으로 타공하여 확보한 공간에 슈퍼커패시터를 장착하는 실험적인 디자인에 대한 연구를 진행하고 있습니다. 이 문서의 최상단에 있는 두 사진을 확인해주세요.
