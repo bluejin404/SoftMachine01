@@ -6,7 +6,7 @@
 
 
 ## Introduction
-**S**cientificly **O**ptimized hardware **F**or reducing cost of **T**ransport / **Machine** no.**01**
+**S**cientifically **O**ptimized hardware **F**or reducing cost of **T**ransport / **Machine** no.**01**
 
 소프트 머신은 수송비용(COT)을 최소화하기 위해 과학적 사고를 통해 최적화된 오픈소스 키드사이즈 휴머노이드 로봇 플랫폼입니다.
 
